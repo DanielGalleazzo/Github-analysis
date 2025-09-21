@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\danie\\Desktop\\An\u00E1liseCommitsV1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{864637D0-DE4D-4514-969B-54EF93B7A326}|An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1.csproj|c:\\users\\danie\\desktop\\an\u00E1lisecommitsv1\\an\u00E1lisecommitsv1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{864637D0-DE4D-4514-969B-54EF93B7A326}|An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1.csproj|solutionrelative:an\u00E1lisecommitsv1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\Desktop\\An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1\\Program.cs",
+              "RelativeDocumentMoniker": "An\u00E1liseCommitsV1\\Program.cs",
+              "ToolTip": "C:\\Users\\danie\\Desktop\\An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1\\Program.cs",
+              "RelativeToolTip": "An\u00E1liseCommitsV1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T16:52:44.64Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

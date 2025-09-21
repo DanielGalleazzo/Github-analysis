@@ -1,0 +1,14 @@
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\bin\Debug\net8.0\AnáliseCommitsV1.exe
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\bin\Debug\net8.0\AnáliseCommitsV1.deps.json
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\bin\Debug\net8.0\AnáliseCommitsV1.runtimeconfig.json
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\bin\Debug\net8.0\AnáliseCommitsV1.dll
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\bin\Debug\net8.0\AnáliseCommitsV1.pdb
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.AssemblyInfoInputs.cache
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.AssemblyInfo.cs
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.csproj.CoreCompileInputs.cache
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.dll
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\refint\AnáliseCommitsV1.dll
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.pdb
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.genruntimeconfig.cache
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\ref\AnáliseCommitsV1.dll
