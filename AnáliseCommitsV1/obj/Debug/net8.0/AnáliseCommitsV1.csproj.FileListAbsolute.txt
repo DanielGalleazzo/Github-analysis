@@ -12,3 +12,4 @@ C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\refi
 C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.pdb
 C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.genruntimeconfig.cache
 C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\ref\AnáliseCommitsV1.dll
+C:\Users\danie\Desktop\AnáliseCommitsV1\AnáliseCommitsV1\obj\Debug\net8.0\AnáliseCommitsV1.sourcelink.json
