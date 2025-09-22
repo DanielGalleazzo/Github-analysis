@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnáliseCommitsV1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+978d8049d1a91aa1a93df6c86e5ad4ac4f8b7c06")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+327ca0ae608ae7de56f54c439c6ceeb52654542d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnáliseCommitsV1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnáliseCommitsV1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,7 +12,7 @@ class Program
     {
         var usuario = "DanielGalleazzo";
         var repositorio = "CotacaoCripto";
-        var api_key = "aaaa";
+        var api_key = "";
         var data1 = "2025-06-01T00:00:00Z";
         var data2 = "2025-06-30T23:59:59Z";
         int contagem = 0;
@@ -47,9 +47,18 @@ class Program
             var data = commitObj.GetProperty("author").GetProperty("date").GetDateTime();
             var mensagem = commitObj.GetProperty("message").GetString();
 
+            Console.WriteLine("Autor: " + autor);
+            Console.WriteLine("Data: " + data);
+            Console.WriteLine("Mensagem: " + mensagem);
+            Console.WriteLine("");
+
             worksheet.Cells[linha, 1].Value = autor;
             worksheet.Cells[linha, 2].Value = data.ToString("yyyy-MM-dd HH:mm:ss");
             worksheet.Cells[linha, 3].Value = mensagem;
+
+            worksheet.Cells["A1:C1"].Style.Font.Bold = true;
+            worksheet.Cells["A1:C1"].Style.Font.Italic = true;
+           
 
             linha++;
             contagem++;
@@ -57,8 +66,15 @@ class Program
 
         worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
 
-        var arquivo = new FileInfo(caminhoArquivo);
-        package.SaveAs(arquivo);
+
+        Console.WriteLine("Você deseja salvar essas informações numa planilha ?");
+        string resposta = Console.ReadLine();
+
+        if (resposta == "sim".ToLower())
+        {
+            var arquivo = new FileInfo(caminhoArquivo);
+            package.SaveAs(arquivo);
+        }
 
         Console.WriteLine("Quantidade de commits no período: " + contagem);
         Console.WriteLine("Arquivo salvo em: " + caminhoArquivo);
