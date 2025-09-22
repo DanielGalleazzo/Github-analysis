@@ -14,6 +14,7 @@ class Program
         var data1 = "2025-06-01T00:00:00Z";
         var data2 = "2025-06-30T23:59:59Z";
         int contagem = 0;
+        string validacaoErro = "commite";
         using var client = new HttpClient();
         client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("AppName", "1.0"));
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", api_key);
@@ -23,13 +24,24 @@ class Program
         var content = await response.Content.ReadAsStringAsync();
 
         using var doc = JsonDocument.Parse(content);
-        foreach (var commit in doc.RootElement.EnumerateArray())
+
+        if (validacaoErro != "commit")
         {
-            var message = commit.GetProperty("commit").GetProperty("message").GetString();
-            Console.WriteLine("Mensagem do commit: " + message);
-            contagem++;
-           
-        }
+            Console.WriteLine("Verifique a forma que a propriedade foi escrita");
+        }   
+        
+            else {
+            foreach (var commit in doc.RootElement.EnumerateArray())
+            {
+                var message = commit.GetProperty(validacaoErro).GetProperty("message").GetString();
+                Console.WriteLine("Mensagem do commit: " + message);
+                    contagem++;
+                }
+            }
+        
+        
         Console.WriteLine("Quantidade de commits no período: " + contagem);
     }
+
+   
 }
