@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="8.1.1" />
+    <PackageReference Include="EPPlus.Interfaces" Version="8.1.0" />
+    <PackageReference Include="OfficeOpenXml.Core.ExcelPackage" Version="1.0.0" />
+  </ItemGroup>
+
 </Project>
