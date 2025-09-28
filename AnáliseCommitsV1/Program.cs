@@ -1,9 +1,9 @@
 ﻿using System;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System.IO;
 using OfficeOpenXml;
 
 class Program
@@ -17,7 +17,8 @@ class Program
         var data2 = "2025-06-30T23:59:59Z";
         int contagem = 0;
 
-        string caminhoArquivo = @"C:\Users\danie\Desktop\AnáliseCommitsV1\GitHub_análise_v1.xlsx"; // caminho
+        string caminhoArquivo = @"C:\Users\danie\Desktop\AnáliseCommitsV1\GitHub_análise_v1.xlsx";
+        string caminhoTxt = Path.ChangeExtension(caminhoArquivo, ".txt");
 
         ExcelPackage.License.SetNonCommercialPersonal("DanielGalleazzo");
 
@@ -58,7 +59,6 @@ class Program
 
             worksheet.Cells["A1:C1"].Style.Font.Bold = true;
             worksheet.Cells["A1:C1"].Style.Font.Italic = true;
-           
 
             linha++;
             contagem++;
@@ -66,17 +66,39 @@ class Program
 
         worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
 
-
         Console.WriteLine("Você deseja salvar essas informações numa planilha ?");
         string resposta = Console.ReadLine();
 
-        if (resposta == "sim".ToLower())
+        if (resposta == "sim")
         {
             var arquivo = new FileInfo(caminhoArquivo);
             package.SaveAs(arquivo);
         }
 
+        Console.WriteLine("Você quer salvar esses dados num arquivo txt ?");
+        string resposta1 = Console.ReadLine();
+        if (resposta1 == "sim")
+        {
+            using (StreamWriter writer = new StreamWriter(caminhoTxt))
+            {
+                foreach (var commit in doc.RootElement.EnumerateArray())
+                {
+                    var commitObj = commit.GetProperty("commit");
+                    var autor = commitObj.GetProperty("author").GetProperty("name").GetString();
+                    var data = commitObj.GetProperty("author").GetProperty("date").GetDateTime();
+                    var mensagem = commitObj.GetProperty("message").GetString();
+
+                    writer.WriteLine($"Autor: {autor}");
+                    writer.WriteLine($"Data: {data:yyyy-MM-dd HH:mm:ss}");
+                    writer.WriteLine($"Mensagem: {mensagem}");
+                    
+                }
+            }
+        }
+
         Console.WriteLine("Quantidade de commits no período: " + contagem);
-        Console.WriteLine("Arquivo salvo em: " + caminhoArquivo);
+        Console.WriteLine("Arquivos salvos em:");
+        Console.WriteLine(caminhoArquivo);
+        Console.WriteLine(caminhoTxt);
     }
 }

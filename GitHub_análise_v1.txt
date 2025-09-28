@@ -1,0 +1,42 @@
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-27 23:15:17
+Mensagem: unahthorized pq o limite de emails ja foi dado
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-15 22:45:13
+Mensagem: começando o java
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-11 21:40:09
+Mensagem:  Usuário recebe as novas moedas pelo e-mail
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-11 13:41:48
+Mensagem:  @Galleazzo me ajudou a pensar na lógica de como melhorar as novas moedas
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-11 01:09:16
+Mensagem: Ver novas moedas
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-10 23:36:26
+Mensagem: Adicionando a terceira opção; pensar melhor parar futuros ajustes
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-10 01:52:47
+Mensagem: Adicionando dois cases
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-09 19:22:46
+Mensagem: Link da imagem
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-09 19:01:41
+Mensagem: Úsuário recebe o horário que as informações foram extraidas
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-09 02:24:12
+Mensagem: Pulando linhas no e-mail cc: @Galleazzo
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-09 02:06:43
+Mensagem: Começando o java
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-08 23:18:07
+Mensagem: Usúario agora pode receber as informações da moeda pelo e-mail
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-08 22:02:21
+Mensagem: Implementando novas coisas
+Autor: Daniel Augusto Galleazzo
+Data: 2025-06-07 02:26:26
+Mensagem: PrimeiroCommit
