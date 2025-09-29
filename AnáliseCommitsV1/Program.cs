@@ -40,6 +40,7 @@ class Program
         worksheet.Cells[1, 3].Value = "Mensagem";
 
         int linha = 2;
+        var commitsLista = new List<(DateTime Data, string Autor, string Mensagem)>();
 
         foreach (var commit in doc.RootElement.EnumerateArray())
         {
@@ -60,6 +61,7 @@ class Program
             worksheet.Cells["A1:C1"].Style.Font.Bold = true;
             worksheet.Cells["A1:C1"].Style.Font.Italic = true;
 
+            commitsLista.Add((data, autor, mensagem));
             linha++;
             contagem++;
         }
@@ -81,24 +83,38 @@ class Program
         {
             using (StreamWriter writer = new StreamWriter(caminhoTxt))
             {
-                foreach (var commit in doc.RootElement.EnumerateArray())
+                foreach (var item in commitsLista)
                 {
-                    var commitObj = commit.GetProperty("commit");
-                    var autor = commitObj.GetProperty("author").GetProperty("name").GetString();
-                    var data = commitObj.GetProperty("author").GetProperty("date").GetDateTime();
-                    var mensagem = commitObj.GetProperty("message").GetString();
-
-                    writer.WriteLine($"Autor: {autor}");
-                    writer.WriteLine($"Data: {data:yyyy-MM-dd HH:mm:ss}");
-                    writer.WriteLine($"Mensagem: {mensagem}");
-                    
+                    writer.WriteLine($"Autor: {item.Autor}");
+                    writer.WriteLine($"Data: {item.Data:yyyy-MM-dd HH:mm:ss}");
+                    writer.WriteLine($"Mensagem: {item.Mensagem}");
                 }
             }
         }
+        var commitsPorDia = commitsLista
+           .GroupBy(c => c.Data.Date)
+           .Select(g => new { Data = g.Key, Count = g.Count() }) //infelizmente nessa parte eu tive que usar meios externos para conseguir fazer essa expressão lambda
+           .OrderBy(g => g.Data);
 
         Console.WriteLine("Quantidade de commits no período: " + contagem);
-        Console.WriteLine("Arquivos salvos em:");
-        Console.WriteLine(caminhoArquivo);
-        Console.WriteLine(caminhoTxt);
+        //Console.WriteLine("Arquivos salvos em:");
+        //Console.WriteLine(caminhoArquivo);
+        //Console.WriteLine(caminhoTxt); não acho relevante essa parte ser exibida ao usuário
+
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("Gráfico representando a quantidade de commits por dia: ");
+        int maxBarras = 50;
+        int maxCommits = commitsPorDia.Max(x => x.Count);
+        foreach (var item in commitsPorDia)
+        {
+            int barrasCount = (int)Math.Ceiling((double)item.Count / maxCommits * maxBarras); // aqui também :(
+            string barras = new string('-', barrasCount);
+            Console.WriteLine($"{item.Data:yyyy-MM-dd}: {barras} ({item.Count})");
+        }
     }
+
+
 }
+
+//rairai 
