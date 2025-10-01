@@ -1,20 +1,22 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using OfficeOpenXml;
+using AnáliseCommitsV1;
 
-class Program
-{
     static async Task Main()
     {
         var usuario = "DanielGalleazzo";
-        var repositorio = "CotacaoCripto";
-        var api_key = "";
-        var data1 = "2025-06-01T00:00:00Z";
-        var data2 = "2025-06-30T23:59:59Z";
+        var repositorio = "TemperaturaDaCidade";
+        var api_key = ""; 
+        var data1 = "2025-05-01T00:00:00Z";
+        var data2 = "2025-06-01T23:59:59Z";
         int contagem = 0;
 
         string caminhoArquivo = @"C:\Users\danie\Desktop\AnáliseCommitsV1\GitHub_análise_v1.xlsx";
@@ -68,18 +70,18 @@ class Program
 
         worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
 
-        Console.WriteLine("Você deseja salvar essas informações numa planilha ?");
+        Console.WriteLine("Você deseja salvar essas informações numa planilha ? (sim/não)");
         string resposta = Console.ReadLine();
 
-        if (resposta == "sim")
+        if (resposta?.ToLower() == "sim")
         {
             var arquivo = new FileInfo(caminhoArquivo);
             package.SaveAs(arquivo);
         }
 
-        Console.WriteLine("Você quer salvar esses dados num arquivo txt ?");
+        Console.WriteLine("Você quer salvar esses dados num arquivo txt ? (sim/não)");
         string resposta1 = Console.ReadLine();
-        if (resposta1 == "sim")
+        if (resposta1?.ToLower() == "sim")
         {
             using (StreamWriter writer = new StreamWriter(caminhoTxt))
             {
@@ -91,30 +93,38 @@ class Program
                 }
             }
         }
+
         var commitsPorDia = commitsLista
            .GroupBy(c => c.Data.Date)
-           .Select(g => new { Data = g.Key, Count = g.Count() }) //infelizmente nessa parte eu tive que usar meios externos para conseguir fazer essa expressão lambda
+           .Select(g => new { Data = g.Key, Count = g.Count() })
            .OrderBy(g => g.Data);
 
         Console.WriteLine("Quantidade de commits no período: " + contagem);
-        //Console.WriteLine("Arquivos salvos em:");
-        //Console.WriteLine(caminhoArquivo);
-        //Console.WriteLine(caminhoTxt); não acho relevante essa parte ser exibida ao usuário
 
-        Console.WriteLine("");
         Console.WriteLine("");
         Console.WriteLine("Gráfico representando a quantidade de commits por dia: ");
         int maxBarras = 50;
         int maxCommits = commitsPorDia.Max(x => x.Count);
         foreach (var item in commitsPorDia)
         {
-            int barrasCount = (int)Math.Ceiling((double)item.Count / maxCommits * maxBarras); // aqui também :(
+            int barrasCount = (int)Math.Ceiling((double)item.Count / maxCommits * maxBarras);
             string barras = new string('-', barrasCount);
             Console.WriteLine($"{item.Data:yyyy-MM-dd}: {barras} ({item.Count})");
         }
+
+        
+        if (commitsLista.Count > 0)
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Deseja que o GPT faça uma análise resumida dos commits? (sim/não)");
+            string respostaGPT = Console.ReadLine();
+            if (respostaGPT?.ToLower() == "sim")
+            {
+                string textoCommits = TextoCommit.GerarTextoCommits(commitsLista);
+                string analise = await AnaliseDoGPT.AnalisarCommitsComGPT(textoCommits);
+                Console.WriteLine("");
+                Console.WriteLine("=== Análise do GPT ===");
+                Console.WriteLine(analise);
+            }
+        }
     }
-
-
-}
-
-//rairai 

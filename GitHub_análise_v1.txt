@@ -1,42 +1,48 @@
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-27 23:15:17
-Mensagem: unahthorized pq o limite de emails ja foi dado
+Data: 2025-06-01 22:16:50
+Mensagem: Update README.md
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-15 22:45:13
-Mensagem: começando o java
+Data: 2025-06-01 22:11:01
+Mensagem: Add files via upload
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-11 21:40:09
-Mensagem:  Usuário recebe as novas moedas pelo e-mail
+Data: 2025-05-17 01:46:19
+Mensagem: Update README.md
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-11 13:41:48
-Mensagem:  @Galleazzo me ajudou a pensar na lógica de como melhorar as novas moedas
+Data: 2025-05-03 15:46:13
+Mensagem: Add files via upload
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-11 01:09:16
-Mensagem: Ver novas moedas
+Data: 2025-05-03 14:42:49
+Mensagem: Remove pasta WindowsFormsTemperatura
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-10 23:36:26
-Mensagem: Adicionando a terceira opção; pensar melhor parar futuros ajustes
+Data: 2025-05-03 05:04:24
+Mensagem: first commit
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-10 01:52:47
-Mensagem: Adicionando dois cases
+Data: 2025-05-03 04:56:19
+Mensagem: Adicionando uma interface com WindowsForms
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-09 19:22:46
-Mensagem: Link da imagem
+Data: 2025-05-03 04:31:01
+Mensagem: Adicionando o WindowsForms
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-09 19:01:41
-Mensagem: Úsuário recebe o horário que as informações foram extraidas
+Data: 2025-05-02 18:01:47
+Mensagem: Implementação de celsius e fahrenheit
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-09 02:24:12
-Mensagem: Pulando linhas no e-mail cc: @Galleazzo
+Data: 2025-05-02 16:12:29
+Mensagem: Celsius/Fahrenheit
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-09 02:06:43
-Mensagem: Começando o java
+Data: 2025-05-02 16:09:29
+Mensagem: Converção de celsius para fahrenheit
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-08 23:18:07
-Mensagem: Usúario agora pode receber as informações da moeda pelo e-mail
+Data: 2025-05-02 15:09:39
+Mensagem: Removendo
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-08 22:02:21
-Mensagem: Implementando novas coisas
+Data: 2025-05-02 15:08:13
+Mensagem: Atualização
 Autor: Daniel Augusto Galleazzo
-Data: 2025-06-07 02:26:26
-Mensagem: PrimeiroCommit
+Data: 2025-05-01 16:05:52
+Mensagem: Implementação da interface
+Autor: Daniel Augusto Galleazzo
+Data: 2025-05-01 03:47:04
+Mensagem: novas alterações
+Autor: Daniel Augusto Galleazzo
+Data: 2025-05-01 03:12:45
+Mensagem: Primeiro commit

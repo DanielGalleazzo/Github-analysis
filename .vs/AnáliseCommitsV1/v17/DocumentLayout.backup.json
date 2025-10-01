@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{864637D0-DE4D-4514-969B-54EF93B7A326}|An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1.csproj|c:\\users\\danie\\desktop\\an\u00E1lisecommitsv1\\an\u00E1lisecommitsv1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{864637D0-DE4D-4514-969B-54EF93B7A326}|An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1.csproj|solutionrelative:an\u00E1lisecommitsv1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{864637D0-DE4D-4514-969B-54EF93B7A326}|An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1.csproj|c:\\users\\danie\\desktop\\an\u00E1lisecommitsv1\\an\u00E1lisecommitsv1\\analisarcommits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{864637D0-DE4D-4514-969B-54EF93B7A326}|An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1.csproj|solutionrelative:an\u00E1lisecommitsv1\\analisarcommits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{864637D0-DE4D-4514-969B-54EF93B7A326}|An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1.csproj|c:\\users\\danie\\desktop\\an\u00E1lisecommitsv1\\an\u00E1lisecommitsv1\\textocommit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{864637D0-DE4D-4514-969B-54EF93B7A326}|An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1.csproj|solutionrelative:an\u00E1lisecommitsv1\\textocommit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +22,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TextoCommit.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\Desktop\\An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1\\TextoCommit.cs",
+              "RelativeDocumentMoniker": "An\u00E1liseCommitsV1\\TextoCommit.cs",
+              "ToolTip": "C:\\Users\\danie\\Desktop\\An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1\\TextoCommit.cs",
+              "RelativeToolTip": "An\u00E1liseCommitsV1\\TextoCommit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T01:37:13.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AnalisarCommits.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\Desktop\\An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1\\AnalisarCommits.cs",
+              "RelativeDocumentMoniker": "An\u00E1liseCommitsV1\\AnalisarCommits.cs",
+              "ToolTip": "C:\\Users\\danie\\Desktop\\An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1\\AnalisarCommits.cs",
+              "RelativeToolTip": "An\u00E1liseCommitsV1\\AnalisarCommits.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T01:26:41.12Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +58,7 @@
               "RelativeDocumentMoniker": "An\u00E1liseCommitsV1\\Program.cs",
               "ToolTip": "C:\\Users\\danie\\Desktop\\An\u00E1liseCommitsV1\\An\u00E1liseCommitsV1\\Program.cs*",
               "RelativeToolTip": "An\u00E1liseCommitsV1\\Program.cs*",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAgwGgAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwHMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-21T16:52:44.64Z",
               "EditorCaption": ""
