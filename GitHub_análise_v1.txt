@@ -1,48 +1,64 @@
 Autor: Daniel Augusto Galleazzo
 Data: 2025-06-01 22:16:50
 Mensagem: Update README.md
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-06-01 22:11:01
 Mensagem: Add files via upload
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-17 01:46:19
 Mensagem: Update README.md
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-03 15:46:13
 Mensagem: Add files via upload
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-03 14:42:49
 Mensagem: Remove pasta WindowsFormsTemperatura
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-03 05:04:24
 Mensagem: first commit
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-03 04:56:19
 Mensagem: Adicionando uma interface com WindowsForms
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-03 04:31:01
 Mensagem: Adicionando o WindowsForms
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-02 18:01:47
 Mensagem: Implementação de celsius e fahrenheit
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-02 16:12:29
 Mensagem: Celsius/Fahrenheit
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-02 16:09:29
 Mensagem: Converção de celsius para fahrenheit
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-02 15:09:39
 Mensagem: Removendo
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-02 15:08:13
 Mensagem: Atualização
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-01 16:05:52
 Mensagem: Implementação da interface
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-01 03:47:04
 Mensagem: novas alterações
+---
 Autor: Daniel Augusto Galleazzo
 Data: 2025-05-01 03:12:45
 Mensagem: Primeiro commit
+---

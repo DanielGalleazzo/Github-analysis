@@ -10,11 +10,13 @@ using System.Collections.Generic;
 using OfficeOpenXml;
 using AnáliseCommitsV1;
 
+class Program
+{
     static async Task Main()
     {
         var usuario = "DanielGalleazzo";
         var repositorio = "TemperaturaDaCidade";
-        var api_key = ""; 
+        var api_key = "";
         var data1 = "2025-05-01T00:00:00Z";
         var data2 = "2025-06-01T23:59:59Z";
         int contagem = 0;
@@ -90,6 +92,7 @@ using AnáliseCommitsV1;
                     writer.WriteLine($"Autor: {item.Autor}");
                     writer.WriteLine($"Data: {item.Data:yyyy-MM-dd HH:mm:ss}");
                     writer.WriteLine($"Mensagem: {item.Mensagem}");
+                    writer.WriteLine("---");
                 }
             }
         }
@@ -112,7 +115,7 @@ using AnáliseCommitsV1;
             Console.WriteLine($"{item.Data:yyyy-MM-dd}: {barras} ({item.Count})");
         }
 
-        
+
         if (commitsLista.Count > 0)
         {
             Console.WriteLine("");
@@ -128,3 +131,4 @@ using AnáliseCommitsV1;
             }
         }
     }
+}
