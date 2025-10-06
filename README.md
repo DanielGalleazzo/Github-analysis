@@ -40,7 +40,7 @@ Sim!! Basta você fazer as alterações nessa parte do código
 
 
 
-Neste caso eu estou vendo os commits do meu irmão usando o exemplo do meu irmão ( @Galleazzo )
+Neste caso eu estou vendo os commits do meu irmão ( @Galleazzo )
 ![VideoPaulo](https://raw.githubusercontent.com/DanielGalleazzo/Github-analysis/refs/heads/main/CommitsPaulo.gif)
 
 
