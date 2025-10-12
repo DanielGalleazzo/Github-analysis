@@ -14,11 +14,11 @@ class Program
 {
     static async Task Main()
     {
-        var usuario = "DanielGalleazzo";
-        var repositorio = "TemperaturaDaCidade";
-        var api_key = "";
-        var data1 = "2025-05-01T00:00:00Z";
-        var data2 = "2025-06-01T23:59:59Z";
+        var usuario = "Galleazzo";
+        var repositorio = "Casamento-Julia-Paulo-BackEnd";
+        var api_key = "coloque aqui a sua chave api";
+        var data1 = "2025-09-13T00:00:00Z";
+        var data2 = "2025-09-27T23:59:59Z";
         int contagem = 0;
 
         string caminhoArquivo = @"C:\Users\danie\Desktop\AnáliseCommitsV1\GitHub_análise_v1.xlsx";
