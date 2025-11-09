@@ -52,10 +52,14 @@ Assim !!
 
 
 
+## Agora temos uma versão em JS/HTML e CSS
+![VideoHTML](https://raw.githubusercontent.com/DanielGalleazzo/Github-analysis/refs/heads/main/GitHub%20Analysis%20HTML%20gif.gif)
+
+
 
 ## Observações 
-Pretendo trabalhar nesse código futuramente, seja adicionando novas funcionalidades ou aprimorando coisas, entretanto, atualmente ele está dessa forma
-(03/10/2025)
+Pretendo aprimorar esse projeto conforme novas ideias surgem, irei trabalhar em pararelo em C# e o projeto web
+09/11/2025
 
 
 
