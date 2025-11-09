@@ -1,5 +1,5 @@
 async function analisarCommitsComGPT(commitsTexto) {
-  const apiKey = "";
+  const apiKey = ""; 
   const requestBody = {
     model: "gpt-4o-mini",
     messages: [
@@ -25,53 +25,60 @@ function gerarTextoCommits(commitsLista) {
   let sb = "";
   for (const c of commitsLista) {
     const dataFormatada = new Date(c.Data).toISOString().replace("T", " ").substring(0, 19);
-    sb += `Autor: ${c.Autor}\n`;
-    sb += `Data: ${dataFormatada}\n`;
-    sb += `Mensagem: ${c.Mensagem}\n`;
-    sb += "-----------------------------\n";
+    sb += `Autor: ${c.Autor}`;
+    sb += `Data: ${dataFormatada}`;
+    sb += `Mensagem: ${c.Mensagem};`;
+    sb += "-----------------------------";
   }
   return sb;
 }
 
 async function main() {
-  const usuario = "Galleazzo"; // mais uma vez usando o meu irmao como exemplo xD valeu, @Galleazzo
-  const repositorio = "Casamento-Julia-Paulo-BackEnd";
-  const api_key = "";
-  const data1 = "2025-09-13T00:00:00Z";
-  const data2 = "2025-09-27T23:59:59Z";
+  const usuario = document.getElementById("Username").value;
+  const repositorio = document.getElementById("RepositoryText").value;
+  const api_key = ""; 
+  const data1 = document.getElementById("firstDateText").value;
+  const data2 = document.getElementById("secondDateText").value;
 
-  console.log(`procurando commits de ${usuario} em ${repositorio}`);
+  const saida = document.getElementById("saida");
+  saida.textContent = `Procurando commits de ${usuario} em ${repositorio}...`;
 
-  const response = await fetch(`https://api.github.com/repos/${usuario}/${repositorio}/commits?author=${usuario}&since=${data1}&until=${data2}`, {
-    headers: {
-      "User-Agent": "AppName/1.0",
-      "Authorization": `token ${api_key}`
+  try {
+    const response = await fetch(
+      `https://api.github.com/repos/${usuario}/${repositorio}/commits?author=${usuario}&since=${data1}&until=${data2}`,
+      {
+        headers: {
+          "User-Agent": "AppName/1.0",
+          "Authorization": `token ${api_key}`
+        }
+      }
+    );
+
+    const content = await response.text();
+    const doc = JSON.parse(content);
+
+    if (!Array.isArray(doc) || doc.length === 0) {
+      saida.textContent += "Nenhum commit encontrado.";
+      return;
     }
-  });
 
-  const content = await response.text();
-  const doc = JSON.parse(content);
+    const commitsLista = doc.map(commit => ({
+      Autor: commit.commit.author.name,
+      Data: commit.commit.author.date,
+      Mensagem: commit.commit.message
+    }));
 
-  if (!Array.isArray(doc) || doc.length === 0) {
-    console.log("nao encontrei nada.");
-    return;
+    const commitsTexto = gerarTextoCommits(commitsLista);
+
+    saida.textContent += "Histórico de commits:" + commitsTexto + "Analisando com GPT...";
+
+    const resumo = await analisarCommitsComGPT(commitsTexto);
+    saida.textContent += "Resumo da análise:" + resumo;
+  } catch (error) {
+    console.error(error);
+    saida.textContent += "Erro";
   }
-
-  const commitsLista = doc.map(commit => ({
-    Autor: commit.commit.author.name,
-    Data: commit.commit.author.date,
-    Mensagem: commit.commit.message
-  }));
-
-  const commitsTexto = gerarTextoCommits(commitsLista);
-
-  console.log("histórico de commits:\n");
-  console.log(commitsTexto);
-
-  console.log("analisando commits com GPT...\n");
-  const resumo = await analisarCommitsComGPT(commitsTexto);
-  console.log("resumo da análise:\n");
-  console.log(resumo);
 }
 
-main();
+
+document.getElementById("goButton").addEventListener("click", main);
