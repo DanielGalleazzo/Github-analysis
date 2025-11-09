@@ -25,10 +25,10 @@ function gerarTextoCommits(commitsLista) {
   let sb = "";
   for (const c of commitsLista) {
     const dataFormatada = new Date(c.Data).toISOString().replace("T", " ").substring(0, 19);
-    sb += `Autor: ${c.Autor}`;
-    sb += `Data: ${dataFormatada}`;
-    sb += `Mensagem: ${c.Mensagem};`;
-    sb += "-----------------------------";
+    sb += `\nAutor: ${c.Autor}`;
+    sb += `\nData: ${dataFormatada}`;
+    sb += `\nMensagem: ${c.Mensagem};`;
+    sb += "\n-----------------------------";
   }
   return sb;
 }
@@ -70,10 +70,10 @@ async function main() {
 
     const commitsTexto = gerarTextoCommits(commitsLista);
 
-    saida.textContent += "Histórico de commits:" + commitsTexto + "Analisando com GPT...";
+    saida.textContent += "\nHistórico de commits:" + commitsTexto + "\nAnalisando com GPT...";
 
     const resumo = await analisarCommitsComGPT(commitsTexto);
-    saida.textContent += "Resumo da análise:" + resumo;
+    saida.textContent += "\nResumo da análise:\n" + resumo;
   } catch (error) {
     console.error(error);
     saida.textContent += "Erro";
