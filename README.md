@@ -55,11 +55,13 @@ Assim !!
 ## Agora temos uma versão em JS/HTML e CSS
 ![VideoHTML](https://raw.githubusercontent.com/DanielGalleazzo/Github-analysis/refs/heads/main/GitHub%20Analysis%20HTML%20gif.gif)
 
-
+## Gráfico no Power BI
+![PowerBI](https://raw.githubusercontent.com/DanielGalleazzo/Github-analysis/refs/heads/main/PrintBICommits.JPG)
 
 ## Observações 
 Pretendo aprimorar esse projeto conforme novas ideias surgem, irei trabalhar em pararelo em C# e o projeto web
-09/11/2025
+
+Ultima alteração no READ.ME: 25/01/2026
 
 
 
