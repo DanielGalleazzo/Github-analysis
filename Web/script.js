@@ -39,6 +39,7 @@ async function main() {
   const api_key = ""; 
   const data1 = document.getElementById("firstDateText").value;
   const data2 = document.getElementById("secondDateText").value;
+  var commitsLista = [];
 
   const saida = document.getElementById("saida");
   saida.textContent = `Procurando commits de ${usuario} em ${repositorio}...`;
@@ -62,7 +63,7 @@ async function main() {
       return;
     }
 
-    const commitsLista = doc.map(commit => ({
+    commitsLista = doc.map(commit => ({
       Autor: commit.commit.author.name,
       Data: commit.commit.author.date,
       Mensagem: commit.commit.message
